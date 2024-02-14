@@ -32,8 +32,8 @@ class SearchTableViewController: UITableViewController {
         navigationItem.searchController = searchController
     }
 
-    private func performSearch() {
-        apiService.fetchSYmbolsPublisher(keywords: "S&P500").sink { completion in
+     private func performSearch() {
+        apiService.fetchSYmbolsPublisher(keywords: "TSLA").sink { (completion) in
             switch completion {
             case .failure(let error):
                 print(error.localizedDescription)
